@@ -1,7 +1,10 @@
 name: CI
 
+# Disabled temporarily - change to 'pull_request:' to re-enable
 on:
   pull_request:
+    branches:
+      - disabled-workflow
     
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
