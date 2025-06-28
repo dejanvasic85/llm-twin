@@ -1,0 +1,51 @@
+settings:
+  docker:
+    parent_image: 992382797823.dkr.ecr.eu-central-1.amazonaws.com/zenml-rlwlcs:latest
+    skip_build: True
+  orchestrator.sagemaker:
+    synchronous: false
+    
+parameters:
+  user_full_name: Dejan Vasic # [First Name(s)] [Last Name]
+  links:
+    # Add your Medium articles, blog posts, LinkedIn posts, GitHub repos, etc.
+    # Examples (replace with your actual content):
+    - "https://medium.com/openunisau-engineering/from-surveys-to-scorecards-system-health-evolution-at-oua-216bc989e090?source=your_stories_page"
+    - "https://medium.com/openunisau-engineering/using-ai-in-technical-interviews-b87c4df6a773"
+    - "https://medium.com/openunisau-engineering/monorepos-powered-by-turborepo-3f22d39c3d28"
+    - "https://medium.com/openunisau-engineering/the-engineering-journey-open-universities-811cdc384b8"
+    - "https://dejan.vasic.com.au"
+    - "https://dejan.vasic.com.au/projects"
+    - "https://dejan.vasic.com.au/cv"
+    - "https://dejan.vasic.com.au/blog/2025/06/avoidoing-any-keyword-in-typescript"
+    - "https://dejan.vasic.com.au/blog/2025/04/displaying-toast-messages-in-svelte-5"
+    - "https://dejan.vasic.com.au/blog/2024/12/creating-custom-svelte-component-with-children-props-in-typescript"
+    - "https://dejan.vasic.com.au/blog/2024/03/sveltekit-with-auth0-integration"
+    - "https://dejan.vasic.com.au/blog/2024/02/nextjs-ssr-with-react-hook-form-not-found-issue"
+    - "https://dejan.vasic.com.au/blog/2023/12/my-journey-into-functional-programming-with-kotlin-and-svelte-kit"
+    - "https://dejan.vasic.com.au/blog/2023/11/asserting-either-in-vitest"
+    - "https://dejan.vasic.com.au/blog/2022/05/next-images-in-storybook"
+    - "https://dejan.vasic.com.au/blog/2022/02/query-graphql-in-nextjs-and-ssr-rehydration"
+    - "https://dejan.vasic.com.au/blog/2021/10/next-getserversideprops-high-order-function-in-typescript"
+    - "https://dejan.vasic.com.au/blog/2021/08/epic-react-course-key-takeaways"
+    - "https://dejan.vasic.com.au/blog/2021/04/auth0-and-apollo-graphql-handling-token-expiry"
+    - "https://dejan.vasic.com.au/blog/2020/12/ant-design-async-validation"
+    - "https://dejan.vasic.com.au/blog/2020/09/ant-design-upload-to-s3-bucket-and-graphql"
+    - "https://dejan.vasic.com.au/blog/2020/08/serving-react-spa-in-koa"
+    - "https://dejan.vasic.com.au/blog/2020/06/circleci-and-heroku-orb"
+    - "https://dejan.vasic.com.au/blog/2020/06/react-typescript-and-ant-design"
+    - "https://dejan.vasic.com.au/blog/2020/04/sequelize-5-with-typescript"
+    - "https://dejan.vasic.com.au/blog/2020/01/ynab-you-really-do-need-a-budget"
+    - "https://dejan.vasic.com.au/blog/2020/01/unit-of-work-with-node-mssql-and-typescript"
+    - "https://dejan.vasic.com.au/blog/2019/11/managing-postgres-database-locally-with-docker"
+    - "https://dejan.vasic.com.au/blog/2019/11/golang-logging-with-correlation-id"
+    - "https://dejan.vasic.com.au/blog/2019/01/paging-in-postgres-and-java"
+    - "https://dejan.vasic.com.au/blog/2015/02/angularjs-password-strength-with-bootstrap"
+    - "https://dejan.vasic.com.au/blog/2013/12/javascript-file-upload-chunking-with-jquery"
+    - "https://dejan.vasic.com.au/blog/2013/03/generating-full-content-url-in-asp-mvc"
+    - "https://github.com/dejanvasic85/portfolio"
+    - "https://github.com/dejanvasic85/notes"
+    - "https://github.com/dejanvasic85/ses-next"
+    - "https://github.com/dejanvasic85/banksy"
+    - "https://github.com/uFinAu/uFin"
+    
