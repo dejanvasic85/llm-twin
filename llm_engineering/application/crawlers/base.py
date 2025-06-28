@@ -2,16 +2,11 @@ import time
 from abc import ABC, abstractmethod
 from tempfile import mkdtemp
 
-import chromedriver_autoinstaller
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
 
 from llm_engineering.domain.documents import NoSQLBaseDocument
-
-# Check if the current version of chromedriver exists
-# and if it doesn't exist, download it automatically,
-# then add chromedriver to path
-chromedriver_autoinstaller.install()
 
 
 class BaseCrawler(ABC):
@@ -43,6 +38,7 @@ class BaseSeleniumCrawler(BaseCrawler, ABC):
 
         self.scroll_limit = scroll_limit
         self.driver = webdriver.Chrome(
+            service=ChromeService(executable_path="/opt/homebrew/bin/chromedriver"),
             options=options,
         )
 
@@ -57,10 +53,14 @@ class BaseSeleniumCrawler(BaseCrawler, ABC):
         current_scroll = 0
         last_height = self.driver.execute_script("return document.body.scrollHeight")
         while True:
-            self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            self.driver.execute_script(
+                "window.scrollTo(0, document.body.scrollHeight);"
+            )
             time.sleep(5)
             new_height = self.driver.execute_script("return document.body.scrollHeight")
-            if new_height == last_height or (self.scroll_limit and current_scroll >= self.scroll_limit):
+            if new_height == last_height or (
+                self.scroll_limit and current_scroll >= self.scroll_limit
+            ):
                 break
             last_height = new_height
             current_scroll += 1
